@@ -1,88 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ibrahim Personal Web</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
-</head>
-<body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="#welcome">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#achieve">My Achievement</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
+  </head>
+  <body>
     <main>
-        <div class="main">
-            <div class="welcome" id="welcome">
-                <section class="hidden">
-                    <div>
-                        <h1>Welcome to my website</h1>
-                        <p>My name is Ibrahim</p>
-                    </div>
-                    <div>
-                        <button>Learn More</button>
-                    </div>
-                </section>
-            </div>
-            <div>
-                <section>
-                    <div id="about">
-                        <h2>About Me</h2>
-                        <p>Hai my name is Ibrahim</p>
-                        <p>I am an undergraduate student from Universitas Sultan Ageng Tirtayasa</p>
-                        <p>I hope i can build this website well</p>
-                    </div>
-                </section>
-            </div>
-            <div>
-                <section>
-                    <div id="achieve">
-                        <h1>My Achievement</h1>
-                        <ul>
-                            <li>Best Computer and Networking Student at SMKN 1 Kota Serang in 2022</li>
-                            <li>Best informatics Student at Universitas Sultan Ageng Tirtayasa in 2022</li>
-                            <li>Second Place in LKS Information Technologies Networking System Administration</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-            <div>
-                <section>
-                    <h2>Gallery</h2>
-                    <div id="gallery">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                </section>
-            </div>
-            
-            <div>
-                <section>
-                    <h2>Contact</h2>
-                    <div id="contact">
-                        <a href="">Website</a>
-                        <a href="">Instagram</a>
-                        <a href="">Github</a>
-                        <a href="">Linkedin</a>
-                    </div>
-                </section>
-            </div>            
+      <!-- Navbar Start -->
+      <nav class="navbar">
+        <a href="#" class="navbar-logo"><span>Ibrahim</span>Website</a>
+        <div class="navbar-menu">
+          <a href="#"
+            ><span><i class="fa-solid fa-home"></i></span> Home</a
+          >
+          <a href="#about"
+            ><span><i class="fa-solid fa-user"></i></span> About Me</a
+          >
+          <a href="#achieve"
+            ><span><i class="fa-solid fa-graduation-cap"></i></span> My
+            Achievement</a
+          >
+          <a href="#contact"
+            ><span class="fa-solid fa-address-book"></span> Contact Me</a
+          >
         </div>
+        <div class="navbar-extra" id="menubar">
+          <a href="#" class="fa-solid fa-bars"></a>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+      <div class="welcome">
+        <section class="hidden">
+          <div>
+            <h1>Welcome to my website</h1>
+            <p>My name is Ibrahim</p>
+          </div>
+          <div>
+            <button onclick="learnMore()">Learn More</button>
+            <button><a href="#about">Learn More</a></button>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section>
+          <div id="about">
+            <h2>About Me</h2>
+            <p>Hai my name is Ibrahim</p>
+            <p>
+              I am an undergraduate student from Universitas Sultan Ageng
+              Tirtayasa
+            </p>
+            <p>I hope i can build this website well</p>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section>
+          <div id="achieve">
+            <h1>My Achievement</h1>
+            <ul>
+              <li>
+                Best Computer and Networking Student at SMKN 1 Kota Serang in
+                2022
+              </li>
+              <li>
+                Best informatics Student at Universitas Sultan Ageng Tirtayasa
+                in 2022
+              </li>
+              <li>
+                Second Place in LKS Information Technologies Networking System
+                Administration
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section>
+          <h2>Gallery</h2>
+          <div id="gallery">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <h2>Contact</h2>
+          <div id="contact">
+            <a href="">Website</a>
+            <a href="">Instagram</a>
+            <a href="">Github</a>
+            <a href="">Linkedin</a>
+          </div>
+        </section>
+      </div>
     </main>
-    <div >
-        <footer class="footer">
+    <div>
+      <footer class="footer">
         <p>Made by Ibrahim</p>
-        </footer>
+      </footer>
     </div>
-    
-</body>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/59839e546c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Coolors Palette Widget -->
+    <script src="https://coolors.co/palette-widget/widget.js"></script>
+    <script data-id="08739122755641522">
+      new CoolorsPaletteWidget("08739122755641522", [
+        "001219",
+        "005f73",
+        "0a9396",
+        "94d2bd",
+        "e9d8a6",
+        "ee9b00",
+        "ca6702",
+        "bb3e03",
+        "ae2012",
+        "9b2226",
+      ]);
+    </script>
+  </body>
 </html>
