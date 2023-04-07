@@ -6,45 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ibrahim Personal Web</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
   </head>
   <body>
-    <main>
-      <!-- Navbar Start -->
-      <nav class="navbar">
-        <a href="#" class="navbar-logo"><span>Ibrahim</span>Website</a>
-        <div class="navbar-menu">
-          <a href="#"
-            ><span><i class="fa-solid fa-home"></i></span> Home</a
-          >
-          <a href="#about"
-            ><span><i class="fa-solid fa-user"></i></span> About Me</a
-          >
-          <a href="#achieve"
-            ><span><i class="fa-solid fa-graduation-cap"></i></span> My
-            Achievement</a
-          >
-          <a href="#contact"
-            ><span class="fa-solid fa-address-book"></span> Contact Me</a
-          >
-        </div>
-        <div class="navbar-extra" id="menubar">
-          <a href="#" class="fa-solid fa-bars"></a>
-        </div>
-      </nav>
-      <!-- Navbar End -->
-      <div class="welcome">
-        <section class="hidden">
-          <div>
-            <h1>Welcome to my website</h1>
-            <p>My name is Ibrahim</p>
-          </div>
-          <div>
-            <button onclick="learnMore()">Learn More</button>
-            <button><a href="#about">Learn More</a></button>
-          </div>
-        </section>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#home" class="navbar-logo"><span>Ibrahim</span>Website</a>
+      <div class="navbar-menu">
+        <a href="#home"><i class="fa-solid fa-home"></i> Home</a>
+        <a href="#about"><i class="fa-solid fa-user"></i> About Me</a>
+        <a href="#achieve"
+          ><i class="fa-solid fa-graduation-cap"></i> My Achievement</a
+        >
+        <a href="#contact"
+          ><i class="fa-solid fa-address-book"></i> Contact Me</a
+        >
       </div>
+      <div class="navbar-extra" id="menubar">
+        <a href="#" class="fa-solid fa-bars"></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <main>
+      <!-- Welcome start -->
+      <section class="welcome" id="home">
+        <div class="welcome-page">
+          <h1>Welcome To My Website</h1>
+          <p>
+            My name is <span>Ibrahim</span>, i build this website with the help
+            of internet
+          </p>
+          <a href="#about" class="welcome-button">Learn More</a>
+        </div>
+      </section>
+
+      <!-- Welcome End -->
       <div>
         <section>
           <div id="about">
@@ -129,5 +124,7 @@
         "9b2226",
       ]);
     </script>
+    <!-- Javascript -->
+    <script src="main.js"></script>
   </body>
 </html>
