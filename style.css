@@ -138,12 +138,14 @@ body {
 
 /* About Me Start */
 .about,
-.skill {
-  padding: 7rem 8% 9rem;
+.skill,
+.contact {
+  padding: 8rem 8% 9rem;
   border-bottom: 2px solid #00151d;
 }
 .about h2,
-.skill h2 {
+.skill h2,
+.contact h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -174,17 +176,14 @@ body {
 /* About Me end */
 
 /* Skill Section Start */
-.skill p {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
 .skill .list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2em;
+  margin: 2rem;
 }
 .skill .list img {
   width: 100px;
@@ -195,6 +194,7 @@ body {
   align-items: center;
   padding: 2rem;
   border-radius: 10px;
+  margin-bottom: 2rem;
   background-color: #000e13;
   box-shadow: 2px 2px 6px rgb(0, 15, 21);
   /* css animation */
@@ -211,10 +211,41 @@ body {
   transform: scale(1.1);
 }
 .skill .list .container .text {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+}
+.skill .list .container .text h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+/* Skill Section End */
+/* Contact Section Start */
+.contact .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 2rem 0 2rem;
+}
+.contact .list .container {
+  padding: 1rem;
+  margin: 0 2rem 1rem;
+  border-radius: 12px;
+  background-color: #000e13;
+  transition: 0.3s;
+}
+.contact .list .container i {
+  font-size: 2rem;
+  color: #fff;
+}
+.contact .list .container:hover {
+  background-color: #ee9b00;
+}
+.contact .list .container:hover i {
+  color: #000e13;
 }
 
-/* Skill Section End */
+/* Contact Section End */
 
 /*  */
 
