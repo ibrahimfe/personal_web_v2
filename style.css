@@ -139,13 +139,15 @@ body {
 /* About Me Start */
 .about,
 .skill,
-.contact {
+.contact,
+.form {
   padding: 8rem 8% 9rem;
   border-bottom: 2px solid #00151d;
 }
 .about h2,
 .skill h2,
-.contact h2 {
+.contact h2,
+.form h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -247,7 +249,44 @@ body {
 
 /* Contact Section End */
 
-/*  */
+/* Form section start */
+.form .form-main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  background-color: #ee9b00;
+  color: #000e13;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+/* Form Section end */
 
 .footer {
   display: flex;
@@ -255,7 +294,7 @@ body {
   align-items: center;
   left: 0px;
   right: 0px;
-  background-color: #284b63;
+  background-color: #005f73;
   color: #fff;
 }
 
