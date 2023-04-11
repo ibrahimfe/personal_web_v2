@@ -29,9 +29,7 @@
       <section class="welcome" id="home">
         <div class="welcome-page">
           <h1>Welcome To <span>Ibrahim</span>Website</h1>
-          <p>
-            My name is Ibrahim, i build this website with the help of internet
-          </p>
+          <p>And I Am a Software Developer</p>
           <a href="#about" class="welcome-button">Learn More</a>
         </div>
       </section>
@@ -79,12 +77,24 @@
             </div>
 
             <div class="about-foto">
-              <img src="aset/pasfoto.jpg" alt="Foto Diri" />
+              <img id="myImg" src="aset/pasfoto.jpg" alt="Foto Diri" />
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <!-- The Close Button -->
+              <span class="close">&times;</span>
+
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="img01" />
+
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption"></div>
             </div>
           </div>
         </section>
       </div>
       <!-- About Section End -->
+
       <!-- skill Section Start -->
       <div>
         <section class="skill" id="skill">
@@ -152,6 +162,22 @@
       </div>
       <!-- skill section End -->
 
+      <!-- Gallery -->
+      <div class="gallery">
+        <h2>Gallery</h2>
+        <div class="row">
+          <div class="column">
+            <img src="aset/foto1.JPG" alt="Achievement 1" style="width: 100%" />
+          </div>
+          <div class="column">
+            <img src="aset/foto2.jpg" alt="Forest" style="width: 100%" />
+          </div>
+          <div class="column">
+            <img src="aset/foto3.jpg" alt="Mountains" style="width: 100%" />
+          </div>
+        </div>
+      </div>
+
       <!-- contact section start -->
 
       <div>
@@ -195,7 +221,7 @@
       <!-- Form start -->
       <div>
         <form class="form" id="form">
-          <h2>Contact Us</h2>
+          <h2>Send Me a Letter</h2>
           <div class="form-main">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -228,22 +254,6 @@
       src="https://kit.fontawesome.com/59839e546c.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Coolors Palette Widget -->
-    <script src="https://coolors.co/palette-widget/widget.js"></script>
-    <script data-id="08739122755641522">
-      new CoolorsPaletteWidget("08739122755641522", [
-        "001219",
-        "005f73",
-        "0a9396",
-        "94d2bd",
-        "e9d8a6",
-        "ee9b00",
-        "ca6702",
-        "bb3e03",
-        "ae2012",
-        "9b2226",
-      ]);
-    </script>
     <!-- Javascript -->
     <script src="main.js"></script>
   </body>

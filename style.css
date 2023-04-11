@@ -13,7 +13,6 @@ body {
   scroll-behavior: smooth;
   background-color: #001219;
   color: #fff;
-  min-height: 2000vh;
 }
 /* Navbar */
 .navbar {
@@ -23,11 +22,12 @@ body {
   left: 0;
   display: flex;
   justify-content: space-between;
+  /* overflow-x: hidden; */
   padding: 1rem 8%;
   align-items: center;
   background-color: rgba(0, 18, 25, 0.9);
   border-bottom: 1px solid #ee9b00;
-  z-index: 99999;
+  z-index: 1;
 }
 .navbar .navbar-logo {
   font-size: 2rem;
@@ -98,11 +98,13 @@ body {
   );
 }
 .welcome .welcome-page {
+  margin: auto;
+  text-align: center;
   padding: 1rem 8%;
   max-width: 100rem;
 }
 .welcome .welcome-page h1 {
-  font-size: 5rem;
+  font-size: 4.4rem;
   text-shadow: 3px 3px 9px rgba(0, 18, 25, 0.5);
   line-height: 1.2;
 }
@@ -111,10 +113,10 @@ body {
 }
 .welcome .welcome-page p {
   font-size: 2rem;
-  margin-top: 1rem;
+  margin: 1rem;
   line-height: 1.4;
   text-shadow: 3px 3px 9px rgba(0, 18, 25, 0.5);
-  font-weight: 300;
+  font-weight: 400;
 }
 .welcome .welcome-button {
   display: inline-block;
@@ -140,14 +142,16 @@ body {
 .about,
 .skill,
 .contact,
-.form {
+.form,
+.gallery {
   padding: 8rem 8% 9rem;
   border-bottom: 2px solid #00151d;
 }
 .about h2,
 .skill h2,
 .contact h2,
-.form h2 {
+.form h2,
+.gallery h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -220,6 +224,18 @@ body {
   font-weight: 500;
 }
 /* Skill Section End */
+
+/* Galley */
+
+.gallery .row {
+  display: flex;
+}
+
+.gallery .column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
 /* Contact Section Start */
 .contact .list {
   display: flex;
@@ -287,6 +303,88 @@ input[type="submit"]:hover {
 }
 
 /* Form Section end */
+/* Modal section Start */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
 
 .footer {
   display: flex;
@@ -294,6 +392,7 @@ input[type="submit"]:hover {
   align-items: center;
   left: 0px;
   right: 0px;
+  padding: 4rem;
   background-color: #005f73;
   color: #fff;
 }
@@ -318,6 +417,9 @@ input[type="submit"]:hover {
   }
   .about .about-me .content {
     flex: 1 1 60%;
+  }
+  .modal-content {
+    width: 50%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -347,6 +449,15 @@ input[type="submit"]:hover {
   }
   .about .about-me .content {
     flex: 1 1 50%;
+  }
+  .modal-content {
+    width: 40%;
+  }
+  .gallery .row {
+    flex-direction: column;
+  }
+  .gallery .column {
+    width: 100%;
   }
 }
 /* Mobile */
