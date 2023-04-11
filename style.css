@@ -43,7 +43,7 @@ body {
   display: inline-block;
   font-size: 1rem;
   padding: 10px;
-  border-radius: 140px;
+  border-radius: 100px;
   margin: 0 6px;
   transition: 0.2s linear;
 }
@@ -192,7 +192,7 @@ body {
   margin: 2rem;
 }
 .skill .list img {
-  width: 100px;
+  width: 6.2rem;
 }
 .skill .list .container {
   display: flex;
@@ -247,7 +247,7 @@ body {
 }
 .contact .list .container {
   padding: 1rem;
-  margin: 0 2rem 1rem;
+  margin: 0 2rem 2rem;
   border-radius: 12px;
   background-color: #000e13;
   transition: 0.3s;
@@ -266,21 +266,29 @@ body {
 /* Contact Section End */
 
 /* Form section start */
+.form {
+  border-bottom: 0;
+}
 .form .form-main {
+  font-weight: 500;
   max-width: 500px;
   margin: 0 auto;
 }
 
-.form label {
+.form .form-main label {
   display: block;
   margin-bottom: 5px;
+}
+.form .form-main input {
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   margin-bottom: 10px;
   border: none;
   border-radius: 10px;
@@ -290,7 +298,7 @@ textarea {
 input[type="submit"] {
   background-color: #ee9b00;
   color: #000e13;
-  padding: 10px 20px;
+  padding: 1rem 1.4rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -386,6 +394,8 @@ input[type="submit"]:hover {
 
 /* The Modal (background) */
 
+/* Footer */
+
 .footer {
   display: flex;
   justify-content: center;
@@ -393,7 +403,8 @@ input[type="submit"]:hover {
   left: 0px;
   right: 0px;
   padding: 4rem;
-  background-color: #005f73;
+  border-top: 2px solid #ee9b00;
+  background-color: #001219;
   color: #fff;
 }
 
@@ -459,6 +470,12 @@ input[type="submit"]:hover {
   .gallery .column {
     width: 100%;
   }
+  .skill {
+    padding-bottom: 0;
+  }
+  .contact {
+    padding-bottom: 0;
+  }
 }
 /* Mobile */
 @media (max-width: 480px) {
@@ -475,9 +492,6 @@ input[type="submit"]:hover {
     width: 40%;
     margin: 0 auto;
   }
-  /* .about .about .content {
-    flex: 1 1 40rem;
-  } */
 }
 
 @media print {
