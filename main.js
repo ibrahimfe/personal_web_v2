@@ -91,3 +91,9 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 // Modal Section End
+
+// Cookies
+// Set a cookie with name "username" and value "John Doe" that expires in 7 days
+document.cookie =
+  "username=Ibrahim; expires=" +
+  new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toUTCString();
