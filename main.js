@@ -1,8 +1,41 @@
+// Right Slide Animation when visible to the viewport
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Typing Animation
+const judul = document.getElementById("welcome");
+const teks = "Welcome To My Website";
+
+let index = 0;
+
+function ketikTeks() {
+  judul.innerHTML = "";
+  judul.innerText = teks.slice(0, index);
+
+  if (index < teks.length) {
+    index++;
+    setTimeout(ketikTeks, 100); // panggil fungsi ini setiap 100ms
+  }
+}
+
+ketikTeks();
+// Sidebar ii being Displayed when click on menu
 const navbarnav = document.querySelector(".navbar-menu");
 document.querySelector("#menubar").onclick = function () {
   navbarnav.classList.toggle("active");
 };
 
+// Sidebar close when user click on the menu or anywhere except the sidebar
 const menubar = document.querySelector("#menubar");
 document.addEventListener("click", function (e) {
   if (!menubar.contains(e.target) && !navbarnav.contains(e.target)) {
@@ -17,9 +50,15 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   // XML Request
   const formData = new FormData(form);
+
+  // Convert Form Data to JSON
+  const data = JSON.stringify(Object.fromEntries(formData));
+
+  // Send the Form Data using AJAX
   const request = new XMLHttpRequest();
-  request.open("POST", "data.txt");
-  request.send(FormData);
+  request.open("POST", "save-data.php"); //mengirimkan data untuk diproses ke save-data.php
+  request.setRequestHeader("Content-Type", "application/json");
+  request.send(data);
 
   form.reset();
   alert("Form Submitted Succesfully");
@@ -49,37 +88,4 @@ span.onclick = function () {
 // Modal Section End
 
 // Gallery Start
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
 // Gallery End

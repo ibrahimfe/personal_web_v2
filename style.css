@@ -8,9 +8,11 @@
   outline: none;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Ubuntu", sans-serif;
-  scroll-behavior: smooth;
   background-color: #001219;
   color: #fff;
 }
@@ -108,6 +110,10 @@ body {
   text-shadow: 3px 3px 9px rgba(0, 18, 25, 0.5);
   line-height: 1.2;
 }
+#welcome {
+  overflow: hidden;
+  animation: typing 3.4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 .welcome .welcome-page h1 span {
   color: #ee9b00;
 }
@@ -182,46 +188,62 @@ body {
 /* About Me end */
 
 /* Skill Section Start */
-.skill .list {
+.skill .list,
+.skill .list1 {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
   flex-direction: row;
   padding-top: 3rem;
   padding-bottom: 2em;
   margin: 2rem;
 }
-.skill .list img {
+.skill .list img,
+.skill .list1 img {
   width: 6.2rem;
 }
-.skill .list .container {
+.skill .list .container,
+.skill .list1 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   border-radius: 10px;
+  margin: 1rem;
   margin-bottom: 2rem;
   background-color: #000e13;
   box-shadow: 2px 2px 6px rgb(0, 15, 21);
-  /* css animation */
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
 }
-.skill .list .container:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-.skill .list .container .text {
+
+.skill .list .container .text,
+.skill .list1 .container .text {
   padding-top: 1.5rem;
 }
-.skill .list .container .text h4 {
+.skill .list .container .text h4,
+.skill .list1 .container .text {
   font-size: 1.3rem;
   font-weight: 500;
+}
+.skill .list .container:nth-child(2) {
+  transition-delay: 100ms;
+}
+.skill .list .container:nth-child(3) {
+  transition-delay: 200ms;
+}
+.skill .list .container:nth-child(4) {
+  transition-delay: 300ms;
+}
+.skill .list .container:nth-child(5) {
+  transition-delay: 400ms;
+}
+.skill .list .container:nth-child(6) {
+  transition-delay: 500ms;
+}
+.skill .list1 .container:nth-child(2) {
+  transition-delay: 100ms;
+}
+.skill .list1 .container:nth-child(3) {
+  transition-delay: 200ms;
 }
 /* Skill Section End */
 
@@ -262,6 +284,24 @@ body {
 .contact .list .container:hover i {
   color: #000e13;
 }
+.contact .list .container:nth-child(2) {
+  transition-delay: 100ms;
+}
+.contact .list .container:nth-child(3) {
+  transition-delay: 200ms;
+}
+.contact .list .container:nth-child(4) {
+  transition-delay: 300ms;
+}
+.contact .list .container:nth-child(5) {
+  transition-delay: 400ms;
+}
+.contact .list .container:nth-child(6) {
+  transition-delay: 500ms;
+}
+.contact .list .container:nth-child(7) {
+  transition-delay: 600ms;
+}
 
 /* Contact Section End */
 
@@ -293,6 +333,9 @@ textarea {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+textarea {
+  resize: vertical;
 }
 
 input[type="submit"] {
@@ -396,22 +439,70 @@ input[type="submit"]:hover {
 
 /* Footer */
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer {
+  text-align: center;
   left: 0px;
   right: 0px;
-  padding: 4rem;
+  padding: 3rem 0;
   border-top: 2px solid #ee9b00;
   background-color: #001219;
   color: #fff;
 }
+footer .links {
+  padding: 1rem 0;
+}
+footer .links a {
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 100px;
+  margin: 0.4rem;
+  color: #fff;
+}
+footer .links a i {
+  color: #ee9b00;
+}
+footer .links a:hover {
+  background-color: #ee9b00;
+  color: #001219;
+  transition: 0.3s;
+}
+footer .links a:hover i {
+  color: #001219;
+  transition: 0.3s;
+}
+footer .copyright {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+footer .copyright p {
+  color: #fff;
+  font-weight: 700;
+}
+footer .copyright a {
+  color: #ee9b00;
+}
 
-/* css hover animation */
+/* CSS Animation When displayed in the ViewPort */
+.hidden {
+  opacity: 0;
+  transform: translateX(-15%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hidden2 {
+  opacity: 0;
+  transform: translateY(-15%);
+  transition: all 1s;
+}
+.show2 {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Media Queries */
-
 /* Laptop */
 @media (max-width: 1366px) {
   html {
@@ -444,7 +535,7 @@ input[type="submit"]:hover {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #005f73;
+    background-color: #001219;
     width: 30rem;
     height: 100vh;
     transition: 0.4s;

@@ -20,7 +20,7 @@
         >
       </div>
       <div class="navbar-extra" id="menubar">
-        <a href="#" class="fa-solid fa-bars"></a>
+        <a href="#1" class="fa-solid fa-bars"></a>
       </div>
     </nav>
     <!-- Navbar End -->
@@ -28,7 +28,7 @@
       <!-- Welcome start -->
       <section class="welcome" id="home">
         <div class="welcome-page">
-          <h1>Welcome To <span>Ibrahim</span>Website</h1>
+          <h1 id="welcome"></h1>
           <p>And I Am a Software Developer</p>
           <a href="#about" class="welcome-button">Learn More</a>
         </div>
@@ -39,7 +39,7 @@
       <div>
         <section class="about" id="about">
           <h2>About Me</h2>
-          <div class="about-me">
+          <div class="about-me hidden">
             <div class="content">
               <h3>Hi my name is ibrahim</h3>
               <p>
@@ -76,7 +76,7 @@
               </p>
             </div>
 
-            <div class="about-foto">
+            <div class="about-foto hidden">
               <img id="myImg" src="aset/pasfoto.jpg" alt="Foto Diri" />
             </div>
             <!-- The Modal -->
@@ -100,37 +100,37 @@
         <section class="skill" id="skill">
           <h2>Skills & Tools</h2>
           <div class="list">
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/html.png" alt="html 5 logo" />
               <div class="text">
                 <h4>HTML 5</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/css-3.png" alt="css 3 logo" />
               <div class="text">
                 <h4>CSS</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/js.png" alt="javascript logo" />
               <div class="text">
                 <h4>JavaScript</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/python.png" alt="python logo" />
               <div class="text">
                 <h4>Python</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/c-.png" alt="c++ logo" />
               <div class="text">
                 <h4>C / C++</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/vscode.png" alt="visual studio code logo" />
               <div class="text">
                 <h4>VSCode</h4>
@@ -138,20 +138,20 @@
             </div>
           </div>
           <h2>Other Related Skills & Tools</h2>
-          <div class="list">
-            <div class="container">
+          <div class="list1">
+            <div class="container hidden">
               <img src="aset/linux.png" alt="linux logo" />
               <div class="text">
                 <h4>Linux Terminal</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/router1.png" alt="router logo" />
               <div class="text">
                 <h4>Computer Network</h4>
               </div>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <img src="aset/git.png" alt="git logo" />
               <div class="text">
                 <h4>Git</h4>
@@ -166,13 +166,13 @@
       <div class="gallery">
         <h2>Gallery</h2>
         <div class="row">
-          <div class="column">
+          <div class="column hidden">
             <img src="aset/foto1.JPG" alt="Achievement 1" style="width: 100%" />
           </div>
-          <div class="column">
+          <div class="column hidden">
             <img src="aset/foto2.jpg" alt="Forest" style="width: 100%" />
           </div>
-          <div class="column">
+          <div class="column hidden">
             <img src="aset/foto3.jpg" alt="Mountains" style="width: 100%" />
           </div>
         </div>
@@ -184,39 +184,39 @@
         <section class="contact" id="contact">
           <h2>Contact</h2>
           <div class="list">
-            <div class="container">
+            <div class="container hidden">
               <a href="mailto:ibrahiimm.f@gmail.com" target="_blank"
                 ><i class="fa-solid fa-envelope"></i
               ></a>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <a href="https://ibrahimfe.github.io" target="_blank"
                 ><i class="fa-solid fa-link"></i
               ></a>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <a href="https://www.instagram.com/baim.38/" target="_blank"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <a href="https://github.com/ibrahimfe" target="_blank"
                 ><i class="fa-brands fa-github"></i
               ></a>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <a href="https://www.linkedin.com/in/ibra-him-/" target="_blank"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <a
                 href="https://www.youtube.com/@Ibrahim-qt9bs/featured"
                 target="_blank"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </div>
-            <div class="container">
+            <div class="container hidden">
               <a href="https://wa.me/6281213369280" target="_blank"
                 ><i class="fa-brands fa-whatsapp"></i
               ></a>
@@ -240,9 +240,14 @@
             <input type="text" id="subject" name="subject" required />
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              resize="none"
+              required
+            ></textarea>
 
-            <input type="submit" value="Send" />
+            <input type="submit" value="Submit" />
           </div>
         </form>
       </div>
@@ -250,8 +255,18 @@
     </main>
     <!-- Footer -->
     <div>
-      <footer class="footer">
-        <p>Author : Ibrahim&COPY;</p>
+      <footer>
+        <div class="links">
+          <a href="#home"><i class="fa-solid fa-home"></i> Home</a>
+          <a href="#about"><i class="fa-solid fa-user"></i> About Me</a>
+          <a href="#skill"><i class="fa-solid fa-code"></i> Skill & Tools</a>
+          <a href="#contact"
+            ><i class="fa-solid fa-address-book"></i> Contact Me</a
+          >
+        </div>
+        <div class="copyright">
+          <p>Created by <a href="">Ibrahim</a>. | &copy; 2023</p>
+        </div>
       </footer>
     </div>
     <!-- Footer -->
