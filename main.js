@@ -13,23 +13,27 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 // Typing Animation
-const judul = document.getElementById("welcome");
-const teks = "Welcome To My Website";
+function typing() {
+  const judul = document.getElementById("welcome");
+  const teks = "Welcome To My Website";
 
-let index = 0;
+  let index = 0;
 
-function ketikTeks() {
-  judul.innerHTML = "";
-  judul.innerText = teks.slice(0, index);
+  function ketikTeks() {
+    judul.innerHTML = "";
+    judul.innerText = teks.slice(0, index);
 
-  if (index < teks.length) {
-    index++;
-    setTimeout(ketikTeks, 100); // panggil fungsi ini setiap 100ms
+    if (index < teks.length) {
+      index++;
+      setTimeout(ketikTeks, 100); // panggil fungsi ini setiap 100ms
+    }
   }
+  ketikTeks();
 }
+setTimeout(typing, 0001);
+setInterval(typing, 5000);
 
-ketikTeks();
-// Sidebar ii being Displayed when click on menu
+// Sidebar is being Displayed when click on menu
 const navbarnav = document.querySelector(".navbar-menu");
 document.querySelector("#menubar").onclick = function () {
   navbarnav.classList.toggle("active");
@@ -57,6 +61,7 @@ form.addEventListener("submit", (event) => {
   // Send the Form Data using AJAX
   const request = new XMLHttpRequest();
   request.open("POST", "save-data.php"); //mengirimkan data untuk diproses ke save-data.php
+  //saya masih belum bisa php jadi form masih belum berfungsi
   request.setRequestHeader("Content-Type", "application/json");
   request.send(data);
 
@@ -86,6 +91,3 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 // Modal Section End
-
-// Gallery Start
-// Gallery End

@@ -174,10 +174,15 @@ body {
   font-size: 1.15rem;
 }
 .about .about-me .content h3 {
+  margin-bottom: 1rem;
   font-size: 1.8rem;
 }
 .about .about-me .content p {
+  margin-bottom: 1rem;
   font-size: 1.2rem;
+}
+.about .about-me .content p > a {
+  color: #ee9b00;
 }
 .about .about-me .about-foto {
   flex: 1 1 1rem;
@@ -192,7 +197,7 @@ body {
 .skill .list1 {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
   padding-top: 3rem;
   padding-bottom: 2em;
@@ -245,9 +250,15 @@ body {
 .skill .list1 .container:nth-child(3) {
   transition-delay: 200ms;
 }
+.skill .list1 .container:nth-child(4) {
+  transition-delay: 300ms;
+}
+.skill .list1 .container:nth-child(5) {
+  transition-delay: 400ms;
+}
 /* Skill Section End */
 
-/* Galley */
+/* Gallery Start */
 
 .gallery .row {
   display: flex;
@@ -257,6 +268,13 @@ body {
   flex: 33.33%;
   padding: 5px;
 }
+.gallery .row .column:nth-child(2) {
+  transition-delay: 100ms;
+}
+.gallery .row .column:nth-child(3) {
+  transition-delay: 200ms;
+}
+/* Gallery End */
 
 /* Contact Section Start */
 .contact .list {
@@ -272,7 +290,7 @@ body {
   margin: 0 2rem 2rem;
   border-radius: 12px;
   background-color: #000e13;
-  transition: 0.3s;
+  transition-duration: 0.3s;
 }
 .contact .list .container i {
   font-size: 2rem;
@@ -280,35 +298,17 @@ body {
 }
 .contact .list .container:hover {
   background-color: #ee9b00;
+  transition: 0.3s;
 }
 .contact .list .container:hover i {
   color: #000e13;
-}
-.contact .list .container:nth-child(2) {
-  transition-delay: 100ms;
-}
-.contact .list .container:nth-child(3) {
-  transition-delay: 200ms;
-}
-.contact .list .container:nth-child(4) {
-  transition-delay: 300ms;
-}
-.contact .list .container:nth-child(5) {
-  transition-delay: 400ms;
-}
-.contact .list .container:nth-child(6) {
-  transition-delay: 500ms;
-}
-.contact .list .container:nth-child(7) {
-  transition-delay: 600ms;
+  transition: 0.3s;
 }
 
 /* Contact Section End */
 
 /* Form section start */
-.form {
-  border-bottom: 0;
-}
+
 .form .form-main {
   font-weight: 500;
   max-width: 500px;
@@ -370,13 +370,13 @@ input[type="submit"]:hover {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: auto; /*Enable scroll if needed*/
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
