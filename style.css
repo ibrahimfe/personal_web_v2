@@ -265,10 +265,13 @@ body {
   display: flex;
 }
 
-.gallery .column {
+.gallery .row .column {
   flex: 33.33%;
   padding: 5px;
   margin: 1px;
+}
+.gallery .row .column img {
+  border-radius: 10px;
 }
 .gallery .row .column:nth-child(2) {
   transition-delay: 100ms;
